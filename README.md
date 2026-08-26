@@ -46,11 +46,16 @@ use **Save all 16** in one and **Load preset** in the other to move them across.
 
 ## Hardware
 
+<img src="https://303.re-style.nl/sketch303_gear.jpg" width="400"
+     alt="A Behringer TD-3 and a Roland TB-303 in a studio rack">
+
+*The two machines this was built for.*
+
 ### Roland TB-303
 
 Needs a [Sequentix MIDIBass 303](https://www.sequentix.com/products/midibass-303-kit) retrofit
-fitted. With it the editor
-plays the machine, and all twelve of the unit's EEPROM settings are writable from one panel.
+fitted. With it the editor plays the machine, and all twelve of the unit's EEPROM settings are
+writable from one panel.
 
 A TB-303 has no pattern memory a computer can reach, so **Capture** records what the machine
 transmits instead. It counts the 303's own MIDI clock at six ticks per step and anchors on MIDI
@@ -79,11 +84,10 @@ button next to About.
 
 ## First run
 
-The Windows installer is unsigned, so SmartScreen shows "Windows protected your PC". Click More
-info, then Run anyway.
+The macOS build is signed and notarised, so it opens normally.
 
-On macOS, if the copy you have is not notarised, right-click the app and choose Open, then confirm.
-The plain double-click is what Gatekeeper blocks.
+The Windows installer is not signed, so SmartScreen shows "Windows protected your PC". Click More
+info, then Run anyway.
 
 ## License
 
