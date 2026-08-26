@@ -1,0 +1,57 @@
+SKETCH-303 License
+Copyright (c) 2026 Rave Generation. All rights reserved.
+
+SKETCH-303 is free to use. It is not open source.
+
+
+WHAT YOU MAY DO
+
+Download and install SKETCH-303 on as many machines as you like, at home or in a
+studio. Use it privately or commercially.
+
+Anything you make with it is yours. No rights are claimed over patterns, MIDI
+files, recordings or music produced using this software, and no credit is
+required.
+
+
+WHAT YOU MAY NOT DO
+
+Redistribute it. Do not re-host the installers or the web app, mirror them, bundle
+them with anything else, or include them in a sample pack, course or collection.
+Link to the official download instead.
+
+Sell it, or charge for access to it, in any form.
+
+Modify, reverse engineer, decompile or disassemble the software, or create derived
+works from it.
+
+Remove or alter copyright notices, branding, or this license.
+
+The manual and the images that come with it are covered by the same terms.
+
+
+NO WARRANTY
+
+This software is provided "as is", without warranty of any kind, express or
+implied, including but not limited to the warranties of merchantability, fitness
+for a particular purpose and noninfringement.
+
+Note in particular that SKETCH-303 can write to connected hardware. Flashing a
+pattern to a Behringer TD-3 overwrites the pattern slot you select, and writing
+MIDIBass 303 settings changes the unit's stored configuration. Back up anything
+you care about before writing to a machine. In no event shall the author be liable
+for any claim, damages, data loss or other liability arising from the use of this
+software, or from any effect it has on connected hardware.
+
+
+TRADEMARKS
+
+TB-303, TR-909 and Roland are trademarks of Roland Corporation. TD-3 and Behringer
+are trademarks of Music Tribe. MIDIBass 303 is a product of Sequentix GmbH. These
+names are used only to identify the hardware this software works with. SKETCH-303
+is not affiliated with, endorsed by, or sponsored by any of them.
+
+
+ANYTHING ELSE
+
+For permissions beyond this license, ask: https://ravegeneration.io
