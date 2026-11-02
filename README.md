@@ -1,86 +1,81 @@
-# SKETCH-303
+# OMEGA-50
 
-Pattern editor for the Roland TB-303 and the Behringer TD-3.
+Six-voice polysynth plugin, with a free editor for the hardware it is modeled on.
 
-![SKETCH-303 in the silver and the dark theme](https://303.re-style.nl/sketch303_light_dark.png)
+<img width="1944" height="1271" alt="OMEGA-50 100 screen 150pr" src="https://github.com/user-attachments/assets/0e11f263-c709-4470-8159-a972714a2c39" />
 
-A piano roll instead of sixteen step buttons, a generator for when the blank grid stares back,
-TR-909 shuffle measured from hardware, and an acid voice built in so it works with nothing plugged
-in. Over MIDI it plays either machine, records a 303's own sequencer back into the grid, and moves
-patterns in and out of a TD-3's memory slots.
+OMEGA-50 is a six-voice polyphonic synthesizer modeled on the Roland MKS-50, the rack version of the
+Alpha Juno: pulse, sawtooth, sub-oscillator and noise into a high-pass and a resonant low-pass filter,
+one envelope, one LFO and the stereo chorus, with the 64 factory tones. Every parameter sits on its
+own knob in our own panel, with a live drawing of the envelope.
 
-## Run it
+## The plugin
 
-**[303.re-style.nl](https://303.re-style.nl)** opens it in the browser. No install, no account, and
-it keeps working offline once the page has loaded.
+VST3 and AU, for Windows and macOS. Available at
+**[ravegeneration.io](https://ravegeneration.io/products/rave-generation-omega-50)**.
 
-Chrome and Edge show an Install icon in the address bar, which gives it its own window.
+- **A faithful recreation.** The MKS-50's voice, its envelopes and its chorus, checked against
+  recordings of a real unit.
+- **Every parameter on a knob.** All 36 tone parameters on one panel in their sections, with each
+  waveform's shape drawn in its window.
+- **Live envelope display.** The envelope drawn as you set it, with its times, levels and key on and
+  key off marked. One click hides it or its labels.
+- **Poly, chord and mono.** Six voices, 16 chords played from a single key, or mono with its own bend
+  range, and portamento.
+- **Played by your controller.** Velocity, aftertouch, mod wheel and pitch bend, each with its depth
+  on the panel, and the sustain pedal.
+- **Stereo chorus.** On or off with one click, with its own rate.
 
-## Download
+In this repository:
+
+| File | What it is |
+|---|---|
+| [OMEGA-50UserManual.pdf](OMEGA-50UserManual.pdf) | The user manual |
+| [OMEGA-50-Presets.zip](OMEGA-50-Presets.zip) | The 64 factory tones as presets |
+
+## The editor
+
+A free patch editor for the hardware. It opens OMEGA-50 presets too, so a sound made in the plugin
+can go to a real unit.
+
+### Run it
+
+**[omega50.re-style.nl](https://omega50.re-style.nl)** opens it in the browser. No install, no account.
+
+### Download
 
 | Platform | File | Size |
 |---|---|---|
-| Windows | [Setup SKETCH-303 v1.0.0.exe](https://303.re-style.nl/Setup%20SKETCH-303%20v1.0.0.exe) | 115 MB |
-| macOS | [Setup SKETCH-303 v1.0.0.dmg](https://303.re-style.nl/Setup%20SKETCH-303%20v1.0.0.dmg) | 229 MB, universal |
-| Both, plus the manual | [Sketch-303Setup.zip](https://303.re-style.nl/Sketch-303Setup.zip) | 344 MB |
+| Windows | [Setup OMEGA-50 Editor v1.0.0.exe](https://omega50.re-style.nl/Setup%20OMEGA-50%20Editor%20v1.0.0.exe) | 114 MB |
+| macOS | [Setup OMEGA-50 Editor v1.0.0.dmg](https://omega50.re-style.nl/Setup%20OMEGA-50%20Editor%20v1.0.0.dmg) | 229 MB, universal |
 
-The macOS build is universal, so Apple Silicon and Intel both. It is the same app in every case.
-Patterns are stored per install, so a bank saved in the browser is not visible to the desktop app:
-use **Save all 16** in one and **Load preset** in the other to move them across.
+The macOS build is universal, so Apple Silicon and Intel both. It is the same editor in every case.
 
-## What it does
+### What it does
 
-- **Piano roll.** Left-click places a note, right-click removes it, drag paints a run. Accent, slide
-  and tie get their own lanes under the grid.
-- **Generator.** Five sliders plus key and scale. Pitches follow a bounded random walk over scale
-  degrees, so a roll comes out as a line with shape. Mutate rerolls a quarter of the steps. Five Feel
-  presets set the sliders and roll in one click.
-- **TR-909 shuffle.** Seven settings matching the 909's Main Keys 1 to 7, derived from rimshot
-  recordings off a real machine. Key 5 lands on 2:1, key 7 on 3:1, and the bar never drifts.
-- **Built-in acid voice.** Sawtooth into a resonant low-pass with an envelope that multiplies the
-  cutoff rather than adding to it. Slides glide without retriggering. Runs with no hardware at all.
-- **Presets and export.** Sixteen slots, saved one at a time or as a whole bank. Export .mid writes a
-  standard MIDI file with the shuffle already in the timing and slides as overlapping notes.
-- **MIDI monitor.** Every byte in and out, decoded. Notes by name and velocity, CCs by function,
-  SysEx read against the settings table.
+- **Every tone parameter on a knob.** LFO, DCO, Key, Waveforms, Voice, VCF, VCA, Env, Chorus and
+  Bender, laid out like the plugin.
+- **Opens what you already have.** A .syx file (a tone, a tone or patch bank, or the chord memories),
+  or a sound saved as an OMEGA-50 .preset, a .talalpha or a .repatch. Load it, drop it or paste it.
+- **Banks.** Store the current sound or patch settings in a bank slot, then save the tone, the bank or
+  the chord memories as .syx.
+- **Sends to the unit.** A single tone, a whole bank of 64 tones or 64 patches, or the 16 chord
+  memories, over MIDI, with your own choice of MIDI in, out and channel.
+- **Keeps your work.** Leaving with a bank that is not saved or sent asks first.
 
 ## Hardware
 
-<img src="https://303.re-style.nl/sketch303_gear.jpg" width="400"
-     alt="A Behringer TD-3 and a Roland TB-303 in a studio rack">
+### MKS-50 and Alpha Juno
 
-*The two machines this was built for.*
-
-### Roland TB-303
-
-Needs a [Sequentix MIDIBass 303](https://www.sequentix.com/products/midibass-303-kit) retrofit
-fitted. With it the editor plays the machine, and all twelve of the unit's EEPROM settings are
-writable from one panel.
-
-A TB-303 has no pattern memory a computer can reach, so **Capture** records what the machine
-transmits instead. It counts the 303's own MIDI clock at six ticks per step and anchors on MIDI
-Start, so a pattern beginning with a rest still lines up. Pitch, accent, slide and tie all survive.
-
-### Behringer TD-3 and TD-3-MO
-
-Nothing to fit. Pick a group, section and pattern, read the slot, edit it, flash it back. Writing is
-read-modify-write, so bytes the format still lists as unknown are carried through untouched. A read
-of the same slot is required before flashing, which is also how you take a backup.
-
-Accent travels as velocity on both machines, and slide as overlapping notes, so the hardware makes
-the slide itself. A standard TD-3 has no MIDI route to its filter. A TD-3-MO follows CC74.
+The editor talks to the unit over MIDI with SysEx. To receive a whole bank, set the unit to Memory
+Protect off and Bulk*Load, pick the group (T-a or T-b for tones, P-A or P-B for patches, CM for the
+chord memories), then Write. Sending a bank replaces the 64 tones or patches of that group, so back
+up the unit's own bank first if you want to keep it.
 
 ## Browser support
 
 Chrome or Edge for the MIDI features, which is a Web MIDI limitation rather than a choice. Safari has
-no Web MIDI at all, so on a Mac use the desktop app or a Chromium browser. Editing, the acid voice,
-the generator, shuffle and .mid export need no hardware, no interface and no network.
-
-## Manual
-
-[SKETCH-303UserManual.pdf](SKETCH-303UserManual.pdf) in this repository, or
-[read it online](https://303.re-style.nl/manual.html). It is also inside the app, under the Manual
-button next to About.
+no Web MIDI at all, so on a Mac use the desktop app or a Chromium browser.
 
 ## First run
 
@@ -91,14 +86,15 @@ info, then Run anyway.
 
 ## License
 
-Free to use, privately or commercially, on as many machines as you like. Anything you make with it
-is yours, with no credit required. It is not open source: please link to the download rather than
-re-hosting it. See [LICENSE](LICENSE).
+The plugin is sold at [ravegeneration.io](https://ravegeneration.io/products/rave-generation-omega-50)
+under the Rave Generation EULA.
+
+The editor is free to use, privately or commercially, on as many machines as you like. It is not open
+source: please link to the download rather than re-hosting it.
 
 ## Credits
 
 Built by [Rave Generation](https://ravegeneration.io).
 
-TB-303, TR-909 and Roland are trademarks of Roland Corporation. TD-3 and Behringer are trademarks of
-Music Tribe. MIDIBass 303 is a product of Sequentix GmbH. This project is not affiliated with,
-endorsed by, or sponsored by any of them.
+Roland, MKS-50 and Alpha Juno are trademarks of Roland Corporation. TAL-Pha is a product of TAL
+Software GmbH. This project is not affiliated with, endorsed by, or sponsored by any of them.
